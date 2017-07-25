@@ -54,8 +54,8 @@ public class NewMemoryActivity extends AppCompatActivity {
     }
 
     public void save(View view) {
-        Bitmap placeholder = ((BitmapDrawable)selectedImageView.getDrawable()).getBitmap();
-        new MemoryDbHelper(this).addMemory(new Memory(titleEditText.getText().toString(), placeholder));
+        Bitmap image = ((BitmapDrawable)selectedImageView.getDrawable()).getBitmap();
+        new MemoryDbHelper(this).addMemory(new Memory(titleEditText.getText().toString(), image));
         finish();
     }
 
