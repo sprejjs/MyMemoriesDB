@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    tools:context="com.spreys.mymemoriesdb.activities.MainActivity">
+
+    <GridView
+        android:id="@+id/activity_main_grid_view"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="4dp"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/activity_main_empty_view"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:text="@string/activity_main_empty_view_text"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/myFAB"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_plus"
+        android:onClick="addNewMemory"
+        app:elevation="4dp" />
+
+</FrameLayout>
