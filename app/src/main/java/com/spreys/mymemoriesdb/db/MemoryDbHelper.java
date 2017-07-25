@@ -10,13 +10,14 @@ import com.spreys.mymemoriesdb.model.Memory;
 
 public class MemoryDbHelper extends SQLiteOpenHelper {
     private static final String TEXT_TYPE = " TEXT";
+    private static final String INTEGER_TYPE = " INTEGER";
     private static final String COMMA_SEP = ",";
     private static final String DATABASE_NAME = "memories.db";
     private static final int DATABASE_VERSION = 1;
 
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + MemoryContract.MemoryEntry.TABLE_NAME + " (" +
-                    MemoryContract.MemoryEntry._ID + " INTEGER PRIMARY KEY," +
+                    MemoryContract.MemoryEntry._ID + INTEGER_TYPE + " PRIMARY KEY" + COMMA_SEP +
                     MemoryContract.MemoryEntry.COLUMN_TITLE + TEXT_TYPE + COMMA_SEP +
                     MemoryContract.MemoryEntry.COLUMN_IMAGE + TEXT_TYPE + " )";
 
